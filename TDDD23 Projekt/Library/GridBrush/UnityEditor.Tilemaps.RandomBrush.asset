@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Random Brush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: 64e2c4215eb5fe640b9b9f8261c45b2b, type: 2}
+  - m_Tile: {fileID: 0}
     m_Matrix:
       e00: 1
       e01: 0
@@ -38,5 +38,5 @@ MonoBehaviour:
   m_FloodFillContiguousOnly: 1
   randomTileSetSize: {x: 1, y: 1, z: 1}
   randomTileSets: []
-  pickRandomTiles: 1
-  addToRandomTiles: 1
+  pickRandomTiles: 0
+  addToRandomTiles: 0
