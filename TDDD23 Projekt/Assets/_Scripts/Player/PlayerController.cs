@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        //controls.Main.Movement.performed += OnMove;
         controls.Main.LeftMouseClick.performed += _ => LeftClick();
         controls.Main.RightMouseClick.performed += _ => RightClick();
     }
@@ -55,18 +54,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("leftclick");
 
     }
-    // void Update(){
-    //     if(IndexOutOfRangeException.GetKey(KeyCode.RightArrow)){
-    //         buttonPressed = RIGHT;
-    //     }
-    // }
-
-    // private void FixedUpdate(){
-    //     if(button pressed){
-    //         hastighet = vec2 (movespeed,0)
-    //     }
-    //     else(button pressed left)
-    // }
 }
 
 
