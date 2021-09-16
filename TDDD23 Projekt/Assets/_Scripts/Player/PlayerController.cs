@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     private Tilemap floorTilemap;
     [SerializeField]
     private Tilemap wallTilemap;
+
+    [SerializeField]
+    private float moveSpeed = 5f;
     private PlayerMovement controls;
     private Camera cam = null;
 
@@ -30,112 +33,40 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        controls.Main.Movement.performed += OnMove;
+        //controls.Main.Movement.performed += OnMove;
         controls.Main.LeftMouseClick.performed += _ => LeftClick();
         controls.Main.RightMouseClick.performed += _ => RightClick();
     }
-    private void OnMove(InputAction.CallbackContext context)
-    {
-        Vector2 direction = context.ReadValue<Vector2>();
-        if (CanMove(direction))
-        {
-            transform.position += (Vector3)direction;
-        }
-    }
-    
-    private void OnMoveLongFloor(Vector3Int endPosition)
-    {
-        //TODO Calculate which moves needs to be made and make them
-        while(floorTilemap.WorldToCell(transform.position) != endPosition)
-        {
-            Vector3Int playerPos = floorTilemap.WorldToCell(transform.position);
-            int deltaX = playerPos.x - endPosition.x;
-            int deltaY = playerPos.y - endPosition.y;
-            if(Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
-            {
-                if (deltaX < 0 && CanMove(Vector2.right))
-                {
-                    transform.position += Vector3.right;
-                }
-                else if (deltaX > 0 && CanMove(Vector2.left))
-                {
-                    transform.position += Vector3.left;
-                }
-                else if (deltaY < 0 && CanMove(Vector2.up))
-                {
-                    transform.position += Vector3.up;
-                }
-                else if (deltaY > 0 && CanMove(Vector2.down))
-                {
-                    transform.position += Vector3.down;
-                }
-                else
-                    break;
-            }
-            else
-            {
-                if (deltaY < 0 && CanMove(Vector2.up))
-                {
-                    transform.position += Vector3.up;
-                }
-                else if (deltaY > 0 && CanMove(Vector2.down))
-                {
-                    transform.position += Vector3.down;
-                }
-                else if (deltaX < 0 && CanMove(Vector2.right))
-                {
-                    transform.position += Vector3.right;
-                }
-                else if (deltaX > 0 && CanMove(Vector2.left))
-                {
-                    transform.position += Vector3.left;
-                }
-                else
-                    break;
-            }
-            
-        }
+
+    void Update(){
+        Vector2 direction = controls.Main.Movement.ReadValue<Vector2>();
+        transform.position += (Vector3)direction*moveSpeed*Time.deltaTime;
     }
 
     private void RightClick()
     {
-        //TODO
+        // låt stå ifall vi vill använda till nått annat
         Debug.Log("rightclick");
     }
 
     private void LeftClick()
     {
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Vector2 worldPosition = cam.ScreenToWorldPoint(mousePosition);
-        Vector3Int gridPosition = floorTilemap.WorldToCell(worldPosition);
-        if (gridPosition == floorTilemap.WorldToCell(transform.position))
-        {
-            //TODO
-            Debug.Log("Player");
-        }
-        else if (floorTilemap.HasTile(gridPosition))
-        {
-            //TODO: MAKE VALID MOVES UNTIL PLAYER AT TILE
-            Debug.Log("floor");
-            OnMoveLongFloor(gridPosition);
-        }
-        else if (wallTilemap.HasTile(gridPosition))
-        {
-            Debug.Log("wall");
-        }
+        // låt stå ifall vi vill använda till nått annat
+        Debug.Log("leftclick");
 
     }
+    // void Update(){
+    //     if(IndexOutOfRangeException.GetKey(KeyCode.RightArrow)){
+    //         buttonPressed = RIGHT;
+    //     }
+    // }
 
-    private bool CanMove(Vector2 direction)
-    {
-        Vector3Int gridPosition = floorTilemap.WorldToCell(transform.position + (Vector3)direction);
-        if (!floorTilemap.HasTile(gridPosition) || wallTilemap.HasTile(gridPosition))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    // private void FixedUpdate(){
+    //     if(button pressed){
+    //         hastighet = vec2 (movespeed,0)
+    //     }
+    //     else(button pressed left)
+    // }
 }
+
+

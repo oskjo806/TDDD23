@@ -49,6 +49,8 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         tilemapVisualizer.Clear();
         tilemapVisualizer.PaintFloorTiles(floor);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
+        //Todo: Find longest corridor ends and set one as startroom and one as end, need to decorate them differently
+        //Delete
         List<Vector2Int> stairs = CreateEndAndStart(floor, roomsList);
         tilemapVisualizer.PaintStairs(stairs);
 
@@ -113,6 +115,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         HashSet<Vector2Int> corridors = new HashSet<Vector2Int>();
         var currentRoomCenter = roomCenters[Random.Range(0, roomCenters.Count)];
+        Debug.Log(currentRoomCenter);
         roomCenters.Remove(currentRoomCenter);
 
         while (roomCenters.Count > 0)
@@ -124,6 +127,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             currentRoomCenter = closest;
             corridors.UnionWith(newCorridor);
         }
+        Debug.Log(currentRoomCenter);
         return corridors;
     }
 
