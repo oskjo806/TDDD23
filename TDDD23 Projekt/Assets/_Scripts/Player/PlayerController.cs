@@ -2,58 +2,60 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
-{
-    [SerializeField]
-    private Tilemap floorTilemap;
-    [SerializeField]
-    private Tilemap wallTilemap;
 
+{
+    
+    private Camera cam;
+
+    public Transform firePoint;
+
+    Vector2 MousePos;
+
+    Vector2 movement;
     [SerializeField]
     private float moveSpeed = 5f;
-    private PlayerMovement controls;
-    private Camera cam = null;
+    private Rigidbody2D rb;
+    private Rigidbody2D fb;
 
-    private void Awake()
-    {
-        controls = new PlayerMovement();
-    }
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-    private void OnDisable()
-    {
-        controls.Disable();
-    }
+
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
-        controls.Main.LeftMouseClick.performed += _ => LeftClick();
-        controls.Main.RightMouseClick.performed += _ => RightClick();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        fb = firePoint.GetComponent<Rigidbody2D>();
     }
 
-    void Update(){
-        Vector2 direction = controls.Main.Movement.ReadValue<Vector2>();
-        transform.position += (Vector3)direction*moveSpeed*Time.deltaTime;
-    }
-
-    private void RightClick()
+    void Update()
     {
-        // låt stå ifall vi vill använda till nått annat
-        Debug.Log("rightclick");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
     }
 
-    private void LeftClick()
+    void FixedUpdate()
     {
-        // låt stå ifall vi vill använda till nått annat
-        Debug.Log("leftclick");
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        Vector2 lookDir = MousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        fb.rotation = angle;
+        fb.position = rb.position;
 
     }
+
+    // lägg till animationer så spriten tittar åt rätt håll.
+
+    //lägg till idol/running animationer
+
+
 }
+
 
 
