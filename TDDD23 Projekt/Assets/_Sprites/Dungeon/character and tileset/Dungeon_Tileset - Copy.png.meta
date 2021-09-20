@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: dac01d36fdd3d474aa14971acc2c966d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4710376882027972381
+    second: Dungeon_Tileset - Copy_0
+  - first:
+      213: -1036857963469433565
+    second: Dungeon_Tileset - Copy_1
+  - first:
+      213: -3282630573134866242
+    second: Dungeon_Tileset - Copy_2
+  - first:
+      213: 6194551391183226938
+    second: Dungeon_Tileset - Copy_3
+  - first:
+      213: -5514411482941344181
+    second: Dungeon_Tileset - Copy_4
+  - first:
+      213: 242992799471078167
+    second: Dungeon_Tileset - Copy_5
+  - first:
+      213: -3390760338691432553
+    second: Dungeon_Tileset - Copy_6
+  - first:
+      213: 3164211844627020898
+    second: Dungeon_Tileset - Copy_7
+  - first:
+      213: 6012918189824202302
+    second: Dungeon_Tileset - Copy_8
+  - first:
+      213: -6310627072119872280
+    second: Dungeon_Tileset - Copy_9
+  - first:
+      213: 1272229346765373318
+    second: Dungeon_Tileset - Copy_10
+  - first:
+      213: 3509978919608640843
+    second: Dungeon_Tileset - Copy_11
+  - first:
+      213: -854001505330524979
+    second: Dungeon_Tileset - Copy_12
+  - first:
+      213: -6626570901360544366
+    second: Dungeon_Tileset - Copy_13
+  - first:
+      213: -8111904484928500134
+    second: Dungeon_Tileset - Copy_14
+  - first:
+      213: 7664007023978431456
+    second: Dungeon_Tileset - Copy_15
+  - first:
+      213: 4014661702185983266
+    second: Dungeon_Tileset - Copy_16
+  - first:
+      213: -8046669720120086164
+    second: Dungeon_Tileset - Copy_17
+  - first:
+      213: -4037934029220754949
+    second: Dungeon_Tileset - Copy_18
+  - first:
+      213: -5922084990737248516
+    second: Dungeon_Tileset - Copy_19
+  - first:
+      213: 8426351623139735020
+    second: Dungeon_Tileset - Copy_20
+  - first:
+      213: 9123454591182628342
+    second: Dungeon_Tileset - Copy_21
+  - first:
+      213: 2667598050975992580
+    second: Dungeon_Tileset - Copy_22
+  - first:
+      213: -6221376234311687417
+    second: Dungeon_Tileset - Copy_23
+  - first:
+      213: 1345323929717983800
+    second: Dungeon_Tileset - Copy_24
+  - first:
+      213: -2016368456243710311
+    second: Dungeon_Tileset - Copy_25
+  - first:
+      213: 2424533662922314598
+    second: Dungeon_Tileset - Copy_26
+  - first:
+      213: -805436652391199005
+    second: Dungeon_Tileset - Copy_27
+  - first:
+      213: 2120783028802690068
+    second: Dungeon_Tileset - Copy_28
+  - first:
+      213: -4383836780913252341
+    second: Dungeon_Tileset - Copy_29
+  - first:
+      213: 5288880672998292449
+    second: Dungeon_Tileset - Copy_30
+  - first:
+      213: 988830350817458547
+    second: Dungeon_Tileset - Copy_31
+  - first:
+      213: 2071991668648488361
+    second: Dungeon_Tileset - Copy_32
+  - first:
+      213: 7874545868141190992
+    second: Dungeon_Tileset - Copy_33
+  - first:
+      213: -737302399144256532
+    second: Dungeon_Tileset - Copy_34
+  - first:
+      213: 8794922076457837449
+    second: Dungeon_Tileset - Copy_35
+  - first:
+      213: -148889160018726338
+    second: Dungeon_Tileset - Copy_36
+  - first:
+      213: 2381670185146372676
+    second: Dungeon_Tileset - Copy_37
+  - first:
+      213: 6219770285389395829
+    second: Dungeon_Tileset - Copy_38
+  - first:
+      213: 1983346976266396171
+    second: Dungeon_Tileset - Copy_39
+  - first:
+      213: 4708681544134227834
+    second: Dungeon_Tileset - Copy_40
+  - first:
+      213: 6009966727010062100
+    second: Dungeon_Tileset - Copy_41
+  - first:
+      213: 9159169570607739469
+    second: Dungeon_Tileset - Copy_42
+  - first:
+      213: -8810118137663850539
+    second: Dungeon_Tileset - Copy_43
+  - first:
+      213: -137304015691099350
+    second: Dungeon_Tileset - Copy_44
+  - first:
+      213: 8492264407901729995
+    second: Dungeon_Tileset - Copy_45
+  - first:
+      213: 4543689843322158869
+    second: Dungeon_Tileset - Copy_46
+  - first:
+      213: -8405929122113381073
+    second: Dungeon_Tileset - Copy_47
+  - first:
+      213: -5564802557365370802
+    second: Dungeon_Tileset - Copy_48
+  - first:
+      213: 3140482691379404718
+    second: Dungeon_Tileset - Copy_49
+  - first:
+      213: -7053491401974424488
+    second: Dungeon_Tileset - Copy_50
+  - first:
+      213: 9159156334808159693
+    second: Dungeon_Tileset - Copy_51
+  - first:
+      213: -1179273128644224137
+    second: Dungeon_Tileset - Copy_52
+  - first:
+      213: -2533305390685302614
+    second: Dungeon_Tileset - Copy_53
+  - first:
+      213: -2758689164605079555
+    second: Dungeon_Tileset - Copy_54
+  - first:
+      213: 1936632827300362998
+    second: Dungeon_Tileset - Copy_55
+  - first:
+      213: -2500707480057470581
+    second: Dungeon_Tileset - Copy_56
+  - first:
+      213: -2119099310297851173
+    second: Dungeon_Tileset - Copy_57
+  - first:
+      213: -8124922095739522849
+    second: Dungeon_Tileset - Copy_58
+  - first:
+      213: -5828697916669954578
+    second: Dungeon_Tileset - Copy_59
+  - first:
+      213: -92486735206804858
+    second: Dungeon_Tileset - Copy_60
+  - first:
+      213: 4230179959966107565
+    second: Dungeon_Tileset - Copy_61
+  - first:
+      213: 2103427028844078490
+    second: Dungeon_Tileset - Copy_62
+  - first:
+      213: 941966830492558177
+    second: Dungeon_Tileset - Copy_63
+  - first:
+      213: 8369396660082739079
+    second: Dungeon_Tileset - Copy_64
+  - first:
+      213: -597590078214287329
+    second: Dungeon_Tileset - Copy_65
+  - first:
+      213: -713235976713686890
+    second: Dungeon_Tileset - Copy_66
+  - first:
+      213: 2427212348634495492
+    second: Dungeon_Tileset - Copy_67
+  - first:
+      213: -3415451300651898133
+    second: Dungeon_Tileset - Copy_68
+  - first:
+      213: 4177383087481876554
+    second: Dungeon_Tileset - Copy_69
+  - first:
+      213: 8825223108053389668
+    second: Dungeon_Tileset - Copy_70
+  - first:
+      213: 1435439281276109758
+    second: Dungeon_Tileset - Copy_71
+  - first:
+      213: 5273894451962588253
+    second: Dungeon_Tileset - Copy_72
+  - first:
+      213: -3514011458824660940
+    second: Dungeon_Tileset - Copy_73
+  - first:
+      213: -7361663403478439827
+    second: Dungeon_Tileset - Copy_74
+  - first:
+      213: -178383441032805791
+    second: Dungeon_Tileset - Copy_75
+  - first:
+      213: -1037654491430473888
+    second: Dungeon_Tileset - Copy_76
+  - first:
+      213: 7053315336839197050
+    second: Dungeon_Tileset - Copy_77
+  - first:
+      213: 8563421642161442842
+    second: Dungeon_Tileset - Copy_78
+  - first:
+      213: -4835634433096949327
+    second: Dungeon_Tileset - Copy_79
+  - first:
+      213: 4990576828808673237
+    second: Dungeon_Tileset - Copy_80
+  - first:
+      213: -6109242592793310022
+    second: Dungeon_Tileset - Copy_81
+  - first:
+      213: -2136495302364640434
+    second: Dungeon_Tileset - Copy_82
+  - first:
+      213: 8710884199555830986
+    second: Dungeon_Tileset - Copy_83
+  - first:
+      213: -3851153088673915216
+    second: Dungeon_Tileset - Copy_84
+  - first:
+      213: 3583529130224507392
+    second: Dungeon_Tileset - Copy_85
+  - first:
+      213: 5214236938649376045
+    second: Dungeon_Tileset - Copy_86
+  - first:
+      213: -4136591667761667875
+    second: Dungeon_Tileset - Copy_87
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dungeon_Tileset - Copy_47
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d125dfff3285b80800000000000000
+      internalID: -8405929122113381073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
