@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine.Tilemaps;
+
 
 public class PlayerController : MonoBehaviour
 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 5f;
     private Rigidbody2D rb;
-    private Rigidbody2D fb;
+    //private Rigidbody2D fb;
 
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         cam = Camera.main;
         rb = gameObject.GetComponent<Rigidbody2D>();
-        fb = firePoint.GetComponent<Rigidbody2D>();
+        //fb = firePoint.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -44,10 +44,21 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = MousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        fb.rotation = angle;
-        fb.position = rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
+        rb.rotation = angle;
+        //fb.position = rb.position;
+        //fb.rotation = angle;
+        //float fbOffset = 0.64f;
+        //firePoint.RotateAround(transform.position,new*fbOffset,angle);
+    }
 
+ 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Shuriken")
+        {
+            Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
+        }
     }
 
     // lägg till animationer så spriten tittar åt rätt håll.
