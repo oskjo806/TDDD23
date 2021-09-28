@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public Transform firePoint;
 
+    Animator animator;
+
     Vector2 MousePos;
 
     Vector2 movement;
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         cam = Camera.main;
         rb = gameObject.GetComponent<Rigidbody2D>();
         //fb = firePoint.GetComponent<Rigidbody2D>();
@@ -34,14 +37,21 @@ public class PlayerController : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
+        float aniSpeed = Mathf.Abs(movement.x) + Mathf.Abs(movement.y);
+        animator.SetFloat("Speed", aniSpeed);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetBool("IsAttacking", true);
+            //TODO: Call when attack animation is done
+            animator.SetBool("IsAttacking", false);
+        }
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
 
         Vector2 lookDir = MousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;

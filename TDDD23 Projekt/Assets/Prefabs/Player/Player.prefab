@@ -112,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2320995790207426661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2320995789641514537}
@@ -148,7 +148,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7795699, y: 1}
+    m_SensorSize: {x: 1.7792208, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 2320995789710829667}
   - component: {fileID: 2320995789710829664}
   - component: {fileID: 5240283146137878470}
+  - component: {fileID: 5665948895731176081}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3325514712973670516}
+  animator: {fileID: 5665948895731176081}
   moveSpeed: 5
 --- !u!50 &2320995789710829667
 Rigidbody2D:
@@ -272,8 +274,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -310,8 +312,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3325514712973670516}
   ShurikenPrefab: {fileID: 5090128373662806135, guid: 2aff1ac642caeb6449787bac4cdda06b, type: 3}
+  animator: {fileID: 5665948895731176081}
   ShurikenForce: 20
   ShurikenRotation: 5
+--- !u!95 &5665948895731176081
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584103983999932427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1e8f720816b7e6478b593efd0405caa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8029618872080337146
 GameObject:
   m_ObjectHideFlags: 0
