@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour
 
     Animator animator;
 
-    Vector2 MousePos;
+    public bool moveToMouse;
 
+    Vector2 MousePos;
     Vector2 movement;
     [SerializeField]
     private float moveSpeed = 5f;
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //Animation controls
         float aniSpeed = Mathf.Abs(movement.x) + Mathf.Abs(movement.y);
         animator.SetFloat("Speed", aniSpeed);
         if (Input.GetButtonDown("Fire1"))
@@ -45,24 +48,28 @@ public class PlayerController : MonoBehaviour
             //TODO: Call when attack animation is done
             animator.SetBool("IsAttacking", false);
         }
-        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
+
+        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
-
         Vector2 lookDir = MousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
         rb.rotation = angle;
-        //fb.position = rb.position;
-        //fb.rotation = angle;
-        //float fbOffset = 0.64f;
-        //firePoint.RotateAround(transform.position,new*fbOffset,angle);
+        if (moveToMouse)
+        {
+            movement.y = -movement.y;
+            rb.MovePosition(rb.position + ((Vector2)rb.transform.TransformDirection(movement).normalized * moveSpeed * Time.fixedDeltaTime));
+        }
+        else
+        {
+            rb.MovePosition(rb.position + (movement.normalized * moveSpeed * Time.fixedDeltaTime));
+        }
     }
 
- 
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Shuriken")
