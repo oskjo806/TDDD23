@@ -4562,6 +4562,8 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+<<<<<<< HEAD
+=======
 --- !u!1 &1466008782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4949,6 +4951,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> origin/main
 --- !u!1 &2097159902
 GameObject:
   m_ObjectHideFlags: 0
@@ -56918,5 +56921,5 @@ Transform:
   - {fileID: 2097159903}
   - {fileID: 486128520}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

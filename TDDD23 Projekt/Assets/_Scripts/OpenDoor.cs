@@ -32,20 +32,23 @@ public class OpenDoor : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("player enter");
-        if (doorsCol.name == "Doors_level1")
+        if(col.tag == "Player")
         {
-            Debug.Log("player enter");
-            SceneManager.LoadScene("Level 1");
+            if (doorsCol.name == "Doors_level1")
+            {
+                Debug.Log("player enter");
+                SceneManager.LoadScene("Level 1");
+            }
+            else if (doorsCol.name == "Doors_level2")
+            {
+                //lOAD SCENE Level 2
+            }
+            else if (doorsCol.name == "Doors_Bossroom")
+            {
+                //lOAD SCENE BossRoom
+            }
         }
-        else if(doorsCol.name == "Doors_level2")
-        {
-            //lOAD SCENE Level 2
-        }
-        else if (doorsCol.name == "Doors_Bossroom")
-        {
-            //lOAD SCENE BossRoom
-        }
+        
 
         //Transfer player to next Level;
     }
