@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour
 
     public bool moveToMouse;
 
+    public GameObject playerParent;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public Health health;
+    public Actions actionHUD;
+
     Vector2 MousePos;
     Vector2 movement;
     [SerializeField]
@@ -28,6 +34,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(playerParent);
+        currentHealth = maxHealth;
+        health.SetMaxHealth(maxHealth);
+
         animator = GetComponent<Animator>();
         cam = Camera.main;
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -44,6 +54,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", aniSpeed);
         if (Input.GetButtonDown("Fire1"))
         {
+            actionHUD.UseShuriken();
             animator.SetBool("IsAttacking", true);
             //TODO: Call when attack animation is done
             animator.SetBool("IsAttacking", false);
@@ -51,6 +62,11 @@ public class PlayerController : MonoBehaviour
 
 
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
     }
 
     void FixedUpdate()
@@ -76,6 +92,12 @@ public class PlayerController : MonoBehaviour
         {
             Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
         }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        health.SetHealth(currentHealth);
     }
 
     // lägg till animationer så spriten tittar åt rätt håll.

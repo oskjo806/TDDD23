@@ -7,19 +7,37 @@ public class InstantiatePlayer : MonoBehaviour
 {
 
     public GameObject playerPrefab;
+    private GameObject player;
     // Start is called before the first frame update
-    void Awake()
-    {   
-        
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        if(sceneName == "Base Room")
+    public void Start()
+    {
+        SceneManager.activeSceneChanged += ChangedActiveScene;
+    }
+    private void ChangedActiveScene(Scene current, Scene next)
+    {
+        string currentName = current.name;
+
+        if (next.name == "Startscreen")
         {
             Instantiate(playerPrefab, new Vector3(2.5f, -3.5f, 0f), transform.rotation);
+            player = GameObject.Find("Player(Clone)");
+            
         }
-        else if(sceneName == "Level 1")
+        else if (next.name == "Base Room")
         {
-            Instantiate(playerPrefab, new Vector3(45f, 59f, 0f), transform.rotation);
+            player = GameObject.Find("Player(Clone)");
+            player.transform.position = new Vector3(2.5f, -3.5f, 0f);
         }
+        else if (next.name == "Level 1")
+        {
+            player = GameObject.Find("Player(Clone)");
+            player.transform.position = new Vector3(56f, 55f, 0f);
+        }
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        Instantiate(playerPrefab, new Vector3(2.5f, -3.5f, 0f), transform.rotation);
+        player = GameObject.Find("Player(Clone)");
     }
 }
