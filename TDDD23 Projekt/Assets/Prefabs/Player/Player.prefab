@@ -148,7 +148,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7792208, y: 1}
+    m_SensorSize: {x: 1.7765957, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 2320995789710829664}
   - component: {fileID: 5240283146137878470}
   - component: {fileID: 5665948895731176081}
+  - component: {fileID: 3409775860997757073}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -259,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3325514712973670516}
-  animator: {fileID: 5665948895731176081}
+  moveToMouse: 0
   moveSpeed: 5
 --- !u!50 &2320995789710829667
 Rigidbody2D:
@@ -312,7 +313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3325514712973670516}
   ShurikenPrefab: {fileID: 5090128373662806135, guid: 2aff1ac642caeb6449787bac4cdda06b, type: 3}
-  animator: {fileID: 5665948895731176081}
   ShurikenForce: 20
   ShurikenRotation: 5
 --- !u!95 &5665948895731176081
@@ -334,6 +334,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3409775860997757073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584103983999932427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dad4e150a1b3e4ca04266d8f565e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  PickedItems: []
 --- !u!1 &8029618872080337146
 GameObject:
   m_ObjectHideFlags: 0

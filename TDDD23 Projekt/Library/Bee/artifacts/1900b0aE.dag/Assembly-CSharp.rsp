@@ -354,6 +354,7 @@
 "Assets/_Scripts/Items.cs"
 "Assets/_Scripts/OpenDoor.cs"
 "Assets/_Scripts/Player/PlayerController.cs"
+"Assets/_Scripts/Player/PlayerItems.cs"
 "Assets/_Scripts/Player/Shuriken.cs"
 "Assets/_Scripts/Player/ShurikenAttack.cs"
 "Assets/_Scripts/ProceduralGenerationAlgoritm.cs"

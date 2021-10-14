@@ -49,6 +49,11 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsAttacking", false);
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GetComponent<PlayerItems>().Interact();
+        }
+
 
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -76,6 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
         }
+      
     }
 
     // lägg till animationer så spriten tittar åt rätt håll.
